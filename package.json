@@ -19,8 +19,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "grunt dev",
-	"build": "grunt serve"
+    "start": "grunt dev",
+    "build": "grunt serve"
   },
   "repository": {
     "type": "git",
