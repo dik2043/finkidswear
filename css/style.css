@@ -25,3 +25,6 @@ body {
   padding: 0;
   outline: 2px solid grey;
 }
+.page-main {
+  outline: 2px solid green;
+}
