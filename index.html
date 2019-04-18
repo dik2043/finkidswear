@@ -55,14 +55,16 @@
             </ul>
         </section>   
         <section class="page-header__bottom-wrapper">
-            <a class="page-header__logo" href="#">
-                <img src="/img/finkidswear.png"> 
-            </a>
+            <div class="page-header__logo-wrapper">
+                <a class="page-header__logo" href="#">
+                    <img src="/img/finkidswear.png"> 
+                </a>
+            </div>
             <div class="page-header__contacts-wrapper">
                 <ul class="page-header__contacts">
-                    <li class="page-header__contacts-item"></li>
-                    <li class="page-header__contacts-item"></li>
-                    <li class="page-header__contacts-item"></li>
+                    <li class="page-header__contacts-item">8 (495) 988-95-10</li>
+                    <li class="page-header__contacts-item">8 (495) 545-96-56</li>
+                    <li class="page-header__contacts-item">8 (495) 545-92-33</li>
                 </ul>
             </div>
             <div class="page-header__trashcan">
@@ -88,6 +90,7 @@
         </div>
         <h1>Верхняя одежда</h1>
         <div class="page-main__wrapper">
+            
             <form class="filter">
                 <div class="filter__types">
                     <input type="checkbox" id="overall" class="filter__type-checkbox visually-hidden">
@@ -183,13 +186,72 @@
             </form>
             
             <section class="products">
-                
+                <h2 class="products__header visually-hidden">Продукты</h2>
+                <!--<p class="products__about">Самые лучшие куртки на&nbsp;осень и&nbsp;весну&nbsp;&mdash;-->
+                    <!--водонепроницаемые и&nbsp;дышащие. Если у&nbsp;Вас есть всесезонная куртка без подстежки,-->
+                    <!--Вы&nbsp;можете спокойно одеть теплый базовый и&nbsp;промежуточный слой под низ, когда похолодает.-->
+                    <!--Если Вам нужен комфорт круглый год, выбирайте куртку без подстежки на&nbsp;более теплое время-->
+                    <!--года и&nbsp;куртку с&nbsp;соответствующим утеплителем на&nbsp;зиму и&nbsp;пуховик на&nbsp;-->
+                    <!--самое холодное время.-->
+                <!--</p>-->
+            
+                <div class="results">
+                    <p class="coats-about">Самые лучшие куртки на осень и весну - водонепроницаемые и дышащие. 
+                        Если у Вас есть всесезонная куртка без подстежки, Вы можете спокойно одеть теплый базовый 
+                        и промежуточный слой под низ, когда похолодает. Если Вам нужен комфорт круглый год, выбирайте 
+                        куртку без подстежки на более теплое время года и куртку с соответствующим утеплителем 
+                        на зиму и пуховик на самое холодное время.</p>
+                    <p class="sorting">Сортировать по
+                        <button class="sorting-name">названию</button>
+                        <button class="sorting-name">цене</button>
+                        <button class="sorting-name">наличию на скаладе</button>
+                    </p> 
+                    <template id="similar-coat-template">
+                        <article class="coat__card">
+                            <img class="coat__img" src="#">
+                            <a class="coat__link" href="#"><p class="coat__name"></p></a>
+                            <p class="coat__price">26 650 Р</p>
+                            <div class="coat__sizes">
+                                <input type="radio" id="122" class="coat__size-122 visually-hidden" name="122" value="122">
+                                <label class="coat__size" for="122">122</label>
+                                <input type="radio" id="116" class="coat__size-116 visually-hidden" name="116" value="116">
+                                <label class="coat__size" for="116">116</label>
+                                <input type="radio" id="110" class="coat__size-110 visually-hidden" name="110" value="110">
+                                <label class="coat__size" for="110">110</label>
+                                <input type="radio" id="104" class="coat__size-104 visually-hidden" name="104" value="104">
+                                <label class="coat__size" for="104">104</label>
+                                <input type="radio" id="128" class="coat__size-128 visually-hidden" name="128" value="128">
+                                <label class="coat__size" for="128">128</label>
+                                <input type="radio" id="134" class="coat__size-134 visually-hidden" name="134" value="134">
+                                <label class="coat__size" for="134">134</label>
+                                <input type="radio" id="158" class="coat__size-158 visually-hidden" name="158" value="158">
+                                <label class="coat__size" for="158">158</label>
+                                <input type="radio" id="152" class="coat__size-152 visually-hidden" name="152" value="152">
+                                <label class="coat__size" for="152">152</label>
+                                <input type="radio" id="146" class="coat__size-146 visually-hidden" name="146" value="146">
+                                <label class="coat__size" for="146">146</label>
+                                <input type="radio" id="140" class="coat__size-140 visually-hidden" name="140" value="140">
+                                <label class="coat__size" for="140">140</label>
+                                <input type="radio" id="164" class="coat__size-164 visually-hidden" name="164" value="164">
+                                <label class="coat__size" for="164">164</label>
+                            </div>
+                            <p class="coat__code">Артикул</p>
+                            <div class="coat__buy-form">
+                                <button class="coat__quantity-plus">+</button>
+                                <input type="number" class="coat__quantity-show" min="1" name="quantity"></input>
+                                <button class="coat__quantity-minus">-</button>
+                                <a class="coat__buy">Купить</a>
+                            </div>
+                            <button class="coat__hold-over">Отложить</button>
+                        </article>
+                    </template>
+                </div>
             </section>
         </div>
         
     </main>
 
-    
+    <script src="js/coats.js"></script>
     <script src="js/script.js "></script>
 
 </body>

@@ -1,12 +1,46 @@
-var mainNav = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
+// Файл отвечает за отрисовку курток по шаблону
 
-navToggle.addEventListener('click', function () {
-    if (mainNav.classList.contains('main-nav--closed'))   {
-        mainNav.classList.remove('main-nav--closed');
-        mainNav.classList.add('main-nav--opened')
-    } else {
-        mainNav.classList.add('main-nav--closed');
-        mainNav.classList.remove("main-nav--opened")
-    }
-})
+(function () {
+    
+    var coatsArr = Array.from(window.coats);
+    
+    var filter = document.querySelector('.filter');
+    
+    var similarCoat = document.querySelector('template')
+        .content
+        .querySelector('.coat__card');
+    console.log(similarCoat);
+    
+    var title = document.querySelector('h1');
+    var results = document.querySelector('.results');
+    /* Как рендерить куртки */
+    
+    var createCoat = function (obj) {
+        var coat = similarCoat.cloneNode(true);
+        coat.querySelector('img').src = obj.photos;
+        coat.querySelector('.coat__name').textContent = obj.name;
+        coat.querySelector('.coat__price').textContent = obj.price;
+        coat.querySelector('.coat__sizes').src = obj.sizes;
+        coat.querySelector('.coat__code').textContent = obj.code;
+        console.log(coat);
+        
+        return coat;
+    };
+    
+    
+    var renderCoats = function (arr) {
+        var fragment = document.createDocumentFragment();        
+        for (var i = 0; i < arr.length; i++) {
+            fragment.appendChild(createCoat(arr[i]));
+            console.log(fragment);
+        }
+        results.appendChild(fragment);
+        
+    };
+    
+    /**/
+    filter.addEventListener('change', function () {
+        renderCoats(coatsArr);
+    })
+    
+})();
