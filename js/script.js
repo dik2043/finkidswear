@@ -39,8 +39,9 @@
     };
     
     /**/
-    filter.addEventListener('change', function () {
-        renderCoats(coatsArr);
-    })
+    
+    // filter.addEventListener('change', function () {
+    //     renderCoats(coatsArr);
+    // })
     
 })();

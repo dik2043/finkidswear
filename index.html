@@ -78,7 +78,7 @@
         <div class="page-main__product-wrapper">
             <nav class="page-main__product-nav">
                 <ul class="page-main__product-items">
-                    <li class="page-main__product-item"><a href="#">Верхняя одежда</a></li>
+                    <li class="page-main__product-item page-main__product-item--active"><a href="#">Верхняя одежда</a></li>
                     <li class="page-main__product-item"><a href="#">Промежуточное белье</a></li>
                     <li class="page-main__product-item"><a href="#">Аксесуары</a></li>
                     <li class="page-main__product-item"><a href="#">Обувь</a></li>
@@ -92,34 +92,40 @@
         <div class="page-main__wrapper">
             
             <form class="filter">
-                <div class="filter__types">
-                    <input type="checkbox" id="overall" class="filter__type-checkbox visually-hidden">
-                    <label class="filter-type" for="overall">Комбинезоны</label>
-                    <input type="checkbox" id="kits" class="filter__type-checkbox visually-hidden">
-                    <label class="filter-type" for="kits">Комплекты</label>
-                    <input type="checkbox" id="jacket" class="filter__type-checkbox visually-hidden">
-                    <label class="filter-type" for="jacket">Куртки</label>
-                    <input type="checkbox" id="pants" class="filter__type-checkbox visually-hidden">
-                    <label class="filter-type" for="pants">Брюки</label>
-                </div>
+                <ul class="filter__types">
+                    <li class="filter__type-item"><a href="#">Комбинезоны</a></li>
+                    <li class="filter__type-item"><a href="#">Комплекты</a></li>
+                    <li class="filter__type-item filter__type-item--active"><a href="#">Куртки</a></li>
+                    <li class="filter__type-item"><a href="#">Брюки</a></li>
+                </ul>
                 <h3 class="filter__price-h">Цена</h3>
-                <div class="filter__range">
-                    <input type="number" class="filter__range-min" name="filter__range-min" value="20">
-                    <input type="number" class="filter__range-max" name="filter__range-max" value="30">
+                <div class="filter__range">                    
                     <div class="filter__line">
                         <div class="filter__pin-min" tabindex="0">Кнопка изменения значения минимума</div>
-                        <div class="filter__level">Глубина эффекта фотографии</div>
+                        <div class="filter__level">Диапазон цены</div>
                         <div class="filter__pin-max" tabindex="0">Кнопка изменения значения максимума</div>
+                    </div>
+                    <div class="filter__range-wrapper">
+                        <p class="filter__from">от</p>
+                        <input type="number" class="filter__range-min" name="filter__range-min" value="20">
+                        <p class="filter__to">до</p>
+                        <input type="number" class="filter__range-max" name="filter__range-max" value="30">
                     </div>
                 </div>
                 <h3 class="filter__fabricators-h">Торговая марка</h3>
                 <div class="filter__fabricators">
-                    <input type="radio" id="fabricator-1" class="filter__fabricator-checkbox1 visually-hidden" name="fabricator" value="1">
-                    <label class="filter__fabricator-1" for="fabricator-1">1</label>
-                    <input type="radio" id="fabricator-2" class="filter__fabricator-checkbox2 visually-hidden" name="fabricator" value="2">
-                    <label class="filter__fabricator-2" for="fabricator-2">2</label>
-                    <input type="radio" id="fabricator-3" class="filter__fabricator-checkbox3 visually-hidden" name="fabricator" value="3">
-                    <label class="filter__fabricator-3" for="fabricator-3">3</label>
+                    <div>   <!-- дивы, чтоб работал checkbox ~ label -->
+                        <input type="checkbox" id="fabricator-1" class="filter__checkbox filter__fabricator-checkbox1 visually-hidden" name="fabricator" value="1">
+                        <label class="filter__fabricator filter__fabricator-1" for="fabricator-1">1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="fabricator-2" class="filter__checkbox filter__fabricator-checkbox2 visually-hidden" name="fabricator" value="2">
+                        <label class="filter__fabricator filter__fabricator-2" for="fabricator-2">2</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="fabricator-3" class="filter__checkbox filter__fabricator-checkbox3 visually-hidden" name="fabricator" value="3">
+                        <label class="filter__fabricator filter__fabricator-3" for="fabricator-3">3</label>
+                    </div>
                 </div>
                 <h3 class="filter__material-h">Материал</h3>
                 <select class="filter__material" name="material">
@@ -129,59 +135,98 @@
                 </select>
                 <h3 class="filter__sizes-h">Размер</h3>
                 <div class="filter__sizes">
-                    <input type="radio" id="122" class="filter__size-122 visually-hidden" name="122" value="122">
-                    <label class="filter__size" for="122">122</label>
-                    <input type="radio" id="116" class="filter__size-116 visually-hidden" name="116" value="116">
-                    <label class="filter__size" for="116">116</label>
-                    <input type="radio" id="110" class="filter__size-110 visually-hidden" name="110" value="110">
-                    <label class="filter__size" for="110">110</label>
-                    <input type="radio" id="104" class="filter__size-104 visually-hidden" name="104" value="104">
-                    <label class="filter__size" for="104">104</label>
-                    <input type="radio" id="128" class="filter__size-128 visually-hidden" name="128" value="128">
-                    <label class="filter__size" for="128">128</label>
-                    <input type="radio" id="134" class="filter__size-134 visually-hidden" name="134" value="134">
-                    <label class="filter__size" for="134">134</label>
-                    <input type="radio" id="158" class="filter__size-158 visually-hidden" name="158" value="158">
-                    <label class="filter__size" for="158">158</label>
-                    <input type="radio" id="152" class="filter__size-152 visually-hidden" name="152" value="152">
-                    <label class="filter__size" for="152">152</label>
-                    <input type="radio" id="146" class="filter__size-146 visually-hidden" name="146" value="146">
-                    <label class="filter__size" for="146">146</label>
-                    <input type="radio" id="140" class="filter__size-140 visually-hidden" name="140" value="140">
-                    <label class="filter__size" for="140">140</label>
-                    <input type="radio" id="164" class="filter__size-164 visually-hidden" name="164" value="164">
-                    <label class="filter__size" for="164">164</label>
+                    <div>
+                        <input disabled type="checkbox" id="122" class="filter__size-checkbox filter__size-122 visually-hidden" name="122" value="122">
+                        <label class="filter__size" for="122">122</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="116" class="filter__size-checkbox filter__size-116 visually-hidden" name="116" value="116">
+                        <label class="filter__size" for="116">116</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="110" class="filter__size-checkbox filter__size-110 visually-hidden" name="110" value="110">
+                        <label class="filter__size" for="110">110</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="104" class="filter__size-checkbox filter__size-104 visually-hidden" name="104" value="104">
+                        <label class="filter__size" for="104">104</label>
+                    </div>
+                    <div>
+                        <input disabled type="checkbox" id="128" class="filter__size-checkbox filter__size-128 visually-hidden" name="128" value="128">
+                        <label class="filter__size" for="128">128</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="134" class="filter__size-checkbox filter__size-134 visually-hidden" name="134" value="134">
+                        <label class="filter__size" for="134">134</label>
+                    </div>
+                    <div>
+                        <input disabled type="checkbox" id="158" class="filter__size-checkbox filter__size-158 visually-hidden" name="158" value="158">
+                        <label class="filter__size" for="158">158</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="152" class="filter__size-checkbox filter__size-152 visually-hidden" name="152" value="152">
+                        <label class="filter__size" for="152">152</label>
+                    </div>
+                    <div>
+                        <input disabled type="checkbox" id="146" class="filter__size-checkbox filter__size-146 visually-hidden" name="146" value="146">
+                        <label class="filter__size" for="146">146</label>
+                    </div>
+                    <div>
+                        <input disabled type="checkbox" id="140" class="filter__size-checkbox filter__size-140 visually-hidden" name="140" value="140">
+                        <label class="filter__size" for="140">140</label>
+                    </div>
+                    <div>
+                        <input disabled type="checkbox" id="164" class="filter__size-checkbox filter__size-164 visually-hidden" name="164" value="164">
+                        <label class="filter__size" for="164">164</label>
+                    </div>
                 </div>
                 <h3 class="filter__color-h">Цвет</h3>
                 <div class="filter__colors">
-                    <input type="radio" id="black" class="filter__color-black visually-hidden" name="black" value="black">
-                    <label class="filter__color" for="black">black</label>
-                    <input type="radio" id="brown" class="filter__color-brown visually-hidden" name="brown" value="brown">
-                    <label class="filter__color" for="brown">brown</label>
-                    <input type="radio" id="red" class="filter__color-red visually-hidden" name="red" value="red">
-                    <label class="filter__color" for="red">red</label>
-                    <input type="radio" id="green" class="filter__color-green visually-hidden" name="green" value="green">
-                    <label class="filter__color" for="green">green</label>
-                    <input type="radio" id="blue" class="filter__color-blue visually-hidden" name="blue" value="blue">
-                    <label class="filter__color" for="blue">blue</label>
+                    <div>  <!-- дивы, чтоб работал checkbox ~ label -->
+                        <input type="checkbox" id="black" class="filter__color-checkbox filter__color-black visually-hidden" name="black" value="black">
+                        <label class="filter__color filter__color--bl" for="black">black</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="brown" class="filter__color-checkbox filter__color-brown visually-hidden" name="brown" value="brown">
+                        <label class="filter__color filter__color--br" for="brown">brown</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="red" class="filter__color-checkbox filter__color-red visually-hidden" name="red" value="red">
+                        <label class="filter__color filter__color--red" for="red">red</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="green" class="filter__color-checkbox filter__color-green visually-hidden" name="green" value="green">
+                        <label class="filter__color filter__color--green" for="green">green</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="blue" class="filter__color-checkbox filter__color-blue visually-hidden" name="blue" value="blue">
+                        <label class="filter__color filter__color--blue" for="blue">blue</label>
+                    </div>
                 </div>
                 <h3 class="filter__genders-h">Пол</h3>
                 <div class="filter__genders">
-                    <input type="radio" id="man" class="filter__gender-man visually-hidden" name="man" value="man">
-                    <label class="filter__color" for="man">man</label>
-                    <input type="radio" id="woman" class="filter__gender-woman visually-hidden" name="woman" value="woman">
-                    <label class="filter__color" for="woman">woman</label>
-                    <input type="radio" id="unisex" class="filter__gender-unisex visually-hidden" name="unisex" value="unisex">
-                    <label class="filter__color" for="unisex">unisex</label>
+                    <div>    <!-- дивы, чтоб работал checkbox ~ label -->
+                        <input type="checkbox" id="man" class="filter__gender-checkbox filter__gender-man visually-hidden" name="man" value="man">
+                        <label class="filter__gender" for="man">Муж.</label>
+                    </div>
+                    <div>  
+                        <input type="checkbox" id="woman" class="filter__gender-checkbox filter__gender-woman visually-hidden" name="woman" value="woman">
+                        <label class="filter__gender" for="woman">Жен.</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="unisex" class="filter__gender-checkbox filter__gender-unisex visually-hidden" name="unisex" value="unisex">
+                        <label class="filter__gender" for="unisex">Унисекс</label>
+                    </div>                    
                 </div>
                 <h3 class="filter__ages-h">Возраст ребенка</h3>
-                <div class="filter__age-range">
-                    <input type="number" class="filter__range-max" name="filter__range-max" value="30">
+                <div class="filter__age-range">                    
                     <div class="filter__age-line">
                         <div class="filter__age-pin-min" tabindex="0">Кнопка изменения значения</div>
                         <div class="filter__age-level">Глубина эффекта фотографии</div>
                     </div>
+                    <div class="filter__age">10</div>
                 </div>
+                <div class="filter__border"></div>
                 <button class="filter__default">Сбросить параметры</button>
             </form>
             
