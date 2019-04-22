@@ -417,7 +417,7 @@ body {
 .filter__material {
   width: 225px;
   margin-left: 40px;
-  padding-bottom: 27px;
+  margin-bottom: 27px;
   font-size: 14px;
   border: none;
 }
@@ -578,7 +578,7 @@ body {
 }
 .filter__age {
   position: absolute;
-  top: 30px;
+  top: 33px;
   left: 26px;
   width: 20px;
   height: 20px;
@@ -601,5 +601,136 @@ body {
   border-bottom: 1px dashed #cd0b3d;
 }
 .products {
-  max-width: 894px;
+  min-height: 1200px;
+  max-height: 1375px;
+  outline: 3px dashed grey;
+}
+.page-footer {
+  max-width: 1200px;
+  margin: 50px auto 0 auto;
+  padding: 0 15px 0 15px;
+}
+.page-footer__top-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.page-footer__logo {
+  flex-shrink: 0;
+  width: 256px;
+  padding-right: 20px;
+}
+.page-footer__social {
+  flex-shrink: 1;
+  margin-left: auto;
+}
+.page-footer .social__list {
+  flex-shrink: 1;
+  min-width: 160px;
+  flex-basis: auto;
+  margin: 0;
+}
+.page-footer__nav {
+  flex-grow: 1;
+  min-width: 440px;
+  max-width: 530px;
+  margin-right: 40px;
+}
+.page-footer__nav .main-nav__list {
+  flex-grow: 1;
+  width: 100%;
+}
+.page-footer__nav {
+  font-weight: bold;
+}
+.page-footer .main-nav__item:hover {
+  background-color: inherit;
+}
+.page-footer__nav .main-nav__list:first-child li a {
+  justify-content: flex-start;
+}
+.page-footer .main-nav__item a:hover {
+  text-decoration: underline;
+  color: black;
+}
+.page-footer__nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+.page-footer__bottom-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.page-footer__contacts {
+  flex-shrink: 0;
+  width: 276px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #636363;
+  list-style: none;
+}
+.page-footer__contacts-item {
+  padding-bottom: 7px;
+}
+.page-footer__lists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-grow: 1;
+  min-height: 200px;
+}
+.page-footer__lists ul {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 120px;
+  margin: 0 auto 0 0;
+  padding: 0 30px 0 0;
+  font-size: 14px;
+  list-style: none;
+}
+.page-footer__lists ul:last-child {
+  padding: 0;
+}
+.page-footer__lists li {
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding: 18px 0 0 0;
+  word-wrap: break-word;
+}
+.page-footer__lists li:first-child {
+  padding: 0;
+  font-weight: bold;
+}
+.page-footer .page-footer__outerwear-list {
+  margin-right: auto;
+}
+.page-footer__lists ul a {
+  color: black;
+  text-decoration: none;
+}
+.page-footer__lists ul a:hover {
+  text-decoration: underline;
+}
+.page-footer__visa {
+  position: absolute;
+  top: 120px;
+  width: 242px;
+  height: 56px;
+  background: url(../img/visa.png) no-repeat;
+  background-size: contain;
 }
