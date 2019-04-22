@@ -9,20 +9,22 @@
     var similarCoat = document.querySelector('template')
         .content
         .querySelector('.coat__card');
-    console.log(similarCoat);
+    // console.log(similarCoat);
     
     var title = document.querySelector('h1');
     var results = document.querySelector('.results');
+    var resultsWrapper = document.querySelector('.results-wrapper');
+    
     /* Как рендерить куртки */
     
     var createCoat = function (obj) {
         var coat = similarCoat.cloneNode(true);
         coat.querySelector('img').src = obj.photos;
-        coat.querySelector('.coat__name').textContent = obj.name;
+        coat.querySelector('.coat__name').textContent = 'Куртка ' + obj.name;
         coat.querySelector('.coat__price').textContent = obj.price;
         coat.querySelector('.coat__sizes').src = obj.sizes;
         coat.querySelector('.coat__code').textContent = obj.code;
-        console.log(coat);
+        // console.log(coat);
         
         return coat;
     };
@@ -32,13 +34,13 @@
         var fragment = document.createDocumentFragment();        
         for (var i = 0; i < arr.length; i++) {
             fragment.appendChild(createCoat(arr[i]));
-            console.log(fragment);
+            // console.log(fragment);
         }
-        results.appendChild(fragment);
-        
+        resultsWrapper.appendChild(fragment);        
     };
+
+    renderCoats(coatsArr);
     
-    /**/
     
     // filter.addEventListener('change', function () {
     //     renderCoats(coatsArr);
